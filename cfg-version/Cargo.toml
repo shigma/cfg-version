@@ -1,0 +1,20 @@
+[package]
+name = "cfg-version"
+version = "1.0.0"
+edition = "2024"
+license = "MIT"
+authors = [
+    "Shigma <shigma10826@gmail.com>",
+]
+description = "Conditional compilation based on dependency versions."
+repository = "https://github.com/shigma/cfg-version"
+documentation = "https://docs.rs/cfg-version"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+semver = "1"
+syn = { version = "2", features = ["full"] }
+quote = "1"
+proc-macro2 = "1"

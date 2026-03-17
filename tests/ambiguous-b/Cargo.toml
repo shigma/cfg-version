@@ -1,0 +1,9 @@
+[package]
+name = "ambiguous-b"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+cfg-version = { path = "../../cfg-version" }
+hashbrown = "0.16"

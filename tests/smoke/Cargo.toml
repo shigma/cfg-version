@@ -1,0 +1,9 @@
+[package]
+name = "cfg-version-smoke"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+cfg-version = { path = "../../cfg-version" }
+indexmap = "2"
