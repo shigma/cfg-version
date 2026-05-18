@@ -6,7 +6,7 @@ Conditional compilation based on dependency versions.
 
 ```toml
 [dependencies]
-cfg-version = "0.1"
+cfg-version = "1"
 ```
 
 ```rs

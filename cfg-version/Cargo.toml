@@ -1,6 +1,6 @@
 [package]
 name = "cfg-version"
-version = "1.0.0"
+version = "1.0.2"
 edition = "2024"
 license = "MIT"
 authors = [
@@ -16,5 +16,4 @@ proc-macro = true
 [dependencies]
 semver = "1"
 syn = { version = "2", features = ["full"] }
-quote = "1"
 proc-macro2 = "1"

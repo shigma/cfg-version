@@ -37,7 +37,6 @@ use std::sync::OnceLock;
 
 use proc_macro::TokenStream;
 use proc_macro2::{Delimiter, TokenStream as TokenStream2, TokenTree};
-use quote::quote;
 use semver::{Version, VersionReq};
 use syn::LitStr;
 use syn::parse::{Parse, ParseStream};
@@ -277,14 +276,5 @@ pub fn cfg_version(args: TokenStream, input: TokenStream) -> TokenStream {
 
     let keep = dep_matches(&args.name, &args.req);
 
-    if keep {
-        let input: TokenStream2 = input.into();
-        quote! {
-            #[allow(clippy::incompatible_msrv)]
-            #input
-        }
-        .into()
-    } else {
-        TokenStream::new()
-    }
+    if keep { input } else { TokenStream::new() }
 }
